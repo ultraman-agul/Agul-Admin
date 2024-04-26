@@ -16,6 +16,50 @@
       }
     },
     {
+      "path": "/three",
+      "name": "three3D",
+      "redirect": "/three/universe",
+      "meta": {
+        "icon": "MessageBox",
+        "title": "three3D",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": false,
+        "isKeepAlive": true
+      },
+      "children": [
+        {
+          "path": "/three/universe",
+          "name": "universe",
+          "component": "/three/universe/index",
+          "meta": {
+            "icon": "Menu",
+            "title": "3D宇宙",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
+        },
+        {
+          "path": "/three/shadow",
+          "name": "shadow",
+          "component": "/three/shadow/index",
+          "meta": {
+            "icon": "Menu",
+            "title": "光影",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
+        }
+      ]
+    },
+    {
       "path": "/dataScreen",
       "name": "dataScreen",
       "component": "/dataScreen/index",
