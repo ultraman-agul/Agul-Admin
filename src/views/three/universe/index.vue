@@ -1,13 +1,13 @@
 <template>
   <div id="three-dom" ref="screenDom"></div>
 </template>
-<script setup>
+<script setup lang="ts">
 import * as THREE from "three";
 import { onMounted, ref } from "vue";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // import { Tween as TWEEN } from "three/examples/jsm/libs/tween.module.js";
 
-const screenDom = ref(null);
+const screenDom = ref<HTMLDivElement>();
 
 onMounted(() => {
   init();
@@ -16,15 +16,15 @@ onMounted(() => {
 const init = () => {
   // 定义渲染尺寸
   const sizes = {
-    width: screenDom.value.clientWidth,
-    height: screenDom.value.clientHeight
+    width: screenDom.value!.clientWidth,
+    height: screenDom.value!.clientHeight
   };
 
   // 初始化渲染器
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(sizes.width, sizes.height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  screenDom.value.appendChild(renderer.domElement);
+  screenDom.value!.appendChild(renderer.domElement);
 
   // 初始化场景
   const scene = new THREE.Scene();
