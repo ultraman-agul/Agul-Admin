@@ -69,7 +69,79 @@
             "isFull": false,
             "isAffix": false,
             "isKeepAlive": true
-          }
+          },
+          "children": [
+            {
+              "path": "/three/bySprite",
+              "name": "bySprite",
+              "component": "/three/sprite/bySprite",
+              "meta": {
+                "icon": "Menu",
+                "title": "sprite粒子",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/three/byPoints",
+              "name": "byPoints",
+              "component": "/three/sprite/byPoints",
+              "meta": {
+                "icon": "Menu",
+                "title": "points粒子",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/three/byCanvas",
+              "name": "byCanvas",
+              "component": "/three/sprite/byCanvas",
+              "meta": {
+                "icon": "Menu",
+                "title": "canvas粒子",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/three/sprite",
+              "name": "sprite",
+              "component": "/three/sprite/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "texture粒子",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/three/sphere",
+              "name": "sprite",
+              "component": "/three/sprite/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "texture粒子",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
         }
       ]
     },

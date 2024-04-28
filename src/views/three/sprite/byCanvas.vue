@@ -125,72 +125,39 @@ const init = () => {
   // gui.addColor(ctrls, "vertexColor").onChange(ctrls.redraw);
   // gui.add(ctrls, "sizeAttenuation").onChange(ctrls.redraw);
 
-  // const createParticlesByCanvas = () => {
-  //   // 使用canvas创建纹理
-  //   const createCanvasTexture = () => {
-  //     const canvas = document.createElement("canvas");
-  //     const ctx = canvas.getContext("2d")!;
-  //     canvas.width = 300;
-  //     canvas.height = 300;
-  //     ctx.lineWidth = 10;
-  //     ctx.beginPath();
-  //     ctx.moveTo(170, 120);
-  //     const grd = ctx.createLinearGradient(0, 0, 170, 0);
-  //     grd.addColorStop(0, "black");
-  //     grd.addColorStop(0.3, "magenta");
-  //     grd.addColorStop(0.5, "blue");
-  //     grd.addColorStop(0.6, "green");
-  //     grd.addColorStop(0.8, "yellow");
-  //     grd.addColorStop(1, "red");
-  //     ctx.strokeStyle = grd;
-  //     ctx.arc(120, 120, 50, 0, Math.PI * 2);
-  //     ctx.stroke();
-  //     const texture = new THREE.CanvasTexture(canvas);
-  //     texture.needsUpdate = true;
-  //     return texture;
-  //   };
-  //   // 创建粒子系统
-  //   const createParticles = (size, transparent, opacity, sizeAttenuation, color) => {
-  //     const texture = createCanvasTexture();
-  //     const geom = new THREE.BufferGeometry();
-  //     const material = new THREE.PointsMaterial({
-  //       size: size,
-  //       transparent: transparent,
-  //       opacity: opacity,
-  //       map: texture,
-  //       sizeAttenuation: sizeAttenuation,
-  //       color: color,
-  //       depthTest: true,
-  //       depthWrite: false
-  //     });
-  //     let veticsFloat32Array: number[] = [];
-  //     const range = 500;
-  //     for (let i = 0; i < 400; i++) {
-  //       const particle = new THREE.Vector3(
-  //         Math.random() * range - range / 2,
-  //         Math.random() * range - range / 2,
-  //         Math.random() * range - range / 2
-  //       );
-  //       veticsFloat32Array.push(particle.x, particle.y, particle.z);
-  //     }
-  //     const vertices = new THREE.Float32BufferAttribute(veticsFloat32Array, 3);
-  //     geom.attributes.position = vertices;
-  //     const particles = new THREE.Points(geom, material);
-  //     scene.add(particles);
-  //   };
-  //   createParticles(40, true, 1, true, 0xffffff);
-  // };
-  // createParticlesByCanvas();
-
-  const createParticlesByTexture = () => {
+  const createParticlesByCanvas = () => {
+    // 使用canvas创建纹理
+    const createCanvasTexture = () => {
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d")!;
+      canvas.width = 300;
+      canvas.height = 300;
+      ctx.lineWidth = 10;
+      ctx.beginPath();
+      ctx.moveTo(170, 120);
+      const grd = ctx.createLinearGradient(0, 0, 170, 0);
+      grd.addColorStop(0, "black");
+      grd.addColorStop(0.3, "magenta");
+      grd.addColorStop(0.5, "blue");
+      grd.addColorStop(0.6, "green");
+      grd.addColorStop(0.8, "yellow");
+      grd.addColorStop(1, "red");
+      ctx.strokeStyle = grd;
+      ctx.arc(120, 120, 50, 0, Math.PI * 2);
+      ctx.stroke();
+      const texture = new THREE.CanvasTexture(canvas);
+      texture.needsUpdate = true;
+      return texture;
+    };
     // 创建粒子系统
     const createParticles = (size, transparent, opacity, sizeAttenuation, color) => {
+      const texture = createCanvasTexture();
       const geom = new THREE.BufferGeometry();
       const material = new THREE.PointsMaterial({
         size: size,
         transparent: transparent,
         opacity: opacity,
-        map: new THREE.TextureLoader().load("/images/heart.png"),
+        map: texture,
         sizeAttenuation: sizeAttenuation,
         color: color,
         depthTest: true,
@@ -213,7 +180,7 @@ const init = () => {
     };
     createParticles(40, true, 1, true, 0xffffff);
   };
-  createParticlesByTexture();
+  createParticlesByCanvas();
   // 页面重绘动画
   const tick = () => {
     controls && controls.update();
