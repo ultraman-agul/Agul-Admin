@@ -56,6 +56,20 @@
             "isAffix": false,
             "isKeepAlive": true
           }
+        },
+        {
+          "path": "/three/sprite",
+          "name": "sprite",
+          "component": "/three/sprite/index",
+          "meta": {
+            "icon": "Menu",
+            "title": "粒子",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
         }
       ]
     },
