@@ -76,30 +76,35 @@ const init = () => {
     scene.add(particles);
   };
   // 创建属性控制器
-  const ctrls = new (function () {
-    this.size = 5;
-    this.transparent = false;
-    this.opacity = 0.6;
-    this.vertexColors = true;
-    this.color = 0xffffff;
-    this.vertexColor = 0x00ff00;
-    this.sizeAttenuation = true;
-    this.rotate = true;
-    this.redraw = function () {
-      if (scene.getObjectByName("particles")) {
-        scene.remove(scene.getObjectByName("particles")!);
-      }
-      createStyledParticlesByPoints({
-        size: ctrls.size,
-        transparent: ctrls.transparent,
-        opacity: ctrls.opacity,
-        vertexColors: ctrls.vertexColors,
-        sizeAttenuation: ctrls.sizeAttenuation,
-        color: ctrls.color,
-        vertexColor: ctrls.vertexColor
-      });
-    };
-  })();
+  const ctrls = {
+    size: 5,
+    transparent: false,
+    opacity: 0.6,
+    vertexColors: true,
+    color: 0xffffff,
+    vertexColor: 0x00ff00,
+    sizeAttenuation: true,
+    rotate: true,
+    redraw
+  };
+
+  function redraw() {
+    if (scene.getObjectByName("particles")) {
+      scene.remove(scene.getObjectByName("particles")!);
+    }
+    createStyledParticlesByPoints({
+      size: ctrls.size,
+      transparent: ctrls.transparent,
+      opacity: ctrls.opacity,
+      vertexColors: ctrls.vertexColors,
+      sizeAttenuation: ctrls.sizeAttenuation,
+      color: ctrls.color,
+      vertexColor: ctrls.vertexColor
+    });
+  }
+
+  ctrls.redraw = redraw;
+
   const gui = new dat.GUI();
   gui.add(ctrls, "size", 0, 10).onChange(ctrls.redraw);
   gui.add(ctrls, "transparent").onChange(ctrls.redraw);

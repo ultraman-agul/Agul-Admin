@@ -114,9 +114,9 @@
               }
             },
             {
-              "path": "/three/sprite",
-              "name": "sprite",
-              "component": "/three/sprite/index",
+              "path": "/three/byTexture",
+              "name": "byTexture",
+              "component": "/three/sprite/byTexture",
               "meta": {
                 "icon": "Menu",
                 "title": "texture粒子",
@@ -128,12 +128,26 @@
               }
             },
             {
-              "path": "/three/sphere",
-              "name": "sprite",
-              "component": "/three/sprite/index",
+              "path": "/three/geometry",
+              "name": "geometry",
+              "component": "/three/sprite/geometry",
               "meta": {
                 "icon": "Menu",
-                "title": "texture粒子",
+                "title": "粒子组成几何体",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            },
+            {
+              "path": "/three/astronaut",
+              "name": "astronaut",
+              "component": "/three/sprite/astronaut/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "宇航员",
                 "isLink": "",
                 "isHide": false,
                 "isFull": false,
