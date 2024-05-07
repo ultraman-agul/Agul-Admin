@@ -177,13 +177,41 @@
           "component": "/three/physics/collision/index",
           "meta": {
             "icon": "Menu",
-            "title": "碰撞",
+            "title": "物理引擎",
             "isLink": "",
             "isHide": false,
             "isFull": true,
             "isAffix": false,
             "isKeepAlive": true
-          }
+          },
+          "children": [
+            {
+              "path": "/three/physics/collision",
+              "name": "collision",
+              "component": "/three/physics/collision/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "碰撞",
+                "isLink": "",
+                "isHide": false,
+                "isFull": true,
+                "isAffix": false
+              }
+            },
+            {
+              "path": "/three/physics/pingPong",
+              "name": "pingPong",
+              "component": "/three/physics/pingPong/index",
+              "meta": {
+                "icon": "Menu",
+                "title": "R3F乒乓球",
+                "isLink": "",
+                "isHide": false,
+                "isFull": true,
+                "isAffix": false
+              }
+            }
+          ]
         }
       ]
     },
