@@ -24,7 +24,7 @@
         "title": "three3D",
         "isLink": "",
         "isHide": false,
-        "isFull": false,
+        "isFull": true,
         "isAffix": false,
         "isKeepAlive": true
       },
@@ -38,7 +38,7 @@
             "title": "3D宇宙",
             "isLink": "",
             "isHide": false,
-            "isFull": false,
+            "isFull": true,
             "isAffix": false,
             "isKeepAlive": true
           }
@@ -52,7 +52,7 @@
             "title": "光影",
             "isLink": "",
             "isHide": false,
-            "isFull": false,
+            "isFull": true,
             "isAffix": false,
             "isKeepAlive": true
           }
@@ -66,7 +66,7 @@
             "title": "粒子",
             "isLink": "",
             "isHide": false,
-            "isFull": false,
+            "isFull": true,
             "isAffix": false,
             "isKeepAlive": true
           },
@@ -80,7 +80,7 @@
                 "title": "sprite粒子",
                 "isLink": "",
                 "isHide": false,
-                "isFull": false,
+                "isFull": true,
                 "isAffix": false,
                 "isKeepAlive": true
               }
@@ -94,7 +94,7 @@
                 "title": "points粒子",
                 "isLink": "",
                 "isHide": false,
-                "isFull": false,
+                "isFull": true,
                 "isAffix": false,
                 "isKeepAlive": true
               }
@@ -108,7 +108,7 @@
                 "title": "canvas粒子",
                 "isLink": "",
                 "isHide": false,
-                "isFull": false,
+                "isFull": true,
                 "isAffix": false,
                 "isKeepAlive": true
               }
@@ -122,7 +122,7 @@
                 "title": "texture粒子",
                 "isLink": "",
                 "isHide": false,
-                "isFull": false,
+                "isFull": true,
                 "isAffix": false,
                 "isKeepAlive": true
               }
@@ -136,7 +136,7 @@
                 "title": "粒子组成几何体",
                 "isLink": "",
                 "isHide": false,
-                "isFull": false,
+                "isFull": true,
                 "isAffix": false,
                 "isKeepAlive": true
               }
@@ -150,12 +150,40 @@
                 "title": "宇航员",
                 "isLink": "",
                 "isHide": false,
-                "isFull": false,
+                "isFull": true,
                 "isAffix": false,
                 "isKeepAlive": true
               }
             }
           ]
+        },
+        {
+          "path": "/three/media",
+          "name": "media",
+          "component": "/three/media/sceneVideo/index",
+          "meta": {
+            "icon": "Menu",
+            "title": "多媒体应用",
+            "isLink": "",
+            "isHide": false,
+            "isFull": true,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
+        },
+        {
+          "path": "/three/physics",
+          "name": "physics",
+          "component": "/three/physics/collision/index",
+          "meta": {
+            "icon": "Menu",
+            "title": "碰撞",
+            "isLink": "",
+            "isHide": false,
+            "isFull": true,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
         }
       ]
     },
