@@ -205,13 +205,28 @@
               "meta": {
                 "icon": "Menu",
                 "title": "R3F乒乓球",
-                "isLink": "",
+                "isLink": "https://react-three-fiber-zeta.vercel.app/",
                 "isHide": false,
-                "isFull": true,
-                "isAffix": false
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
               }
             }
           ]
+        },
+        {
+          "path": "/three/panorama",
+          "name": "panorama",
+          "component": "/three/panorama/normal/index",
+          "meta": {
+            "icon": "Menu",
+            "title": "全景看房🏠",
+            "isLink": "",
+            "isHide": false,
+            "isFull": true,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
         }
       ]
     },

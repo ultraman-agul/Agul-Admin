@@ -1,0 +1,12 @@
+.home {
+  height: 100%;
+  canvas {
+    height: 100%;
+  }
+  .switch {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
